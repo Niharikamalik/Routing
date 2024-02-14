@@ -1,0 +1,28 @@
+<p>user works!</p>
+
+<div>
+  <a
+  [routerLink]="['/category']"
+  routerLinkActive="active" >Go to categories</a>
+  <p>Navigate to category using navigateUrl</p>
+  <button (click)="onCategoriesClick()">Go to categories</button>
+  <p>Navigate to categories using navigate method </p>
+  <button (click)="onCategories()">Go to categories</button>
+  <div>
+    <p> add data using dynamic routes</p>
+    <h1>Hello {{user?.name?.charAt(0)?.toUpperCase()}}{{user?.name?.slice(1)}}</h1>
+    <h4>Welcome {{user?.name}} your id is {{user?.id}}</h4>
+
+
+  </div>
+
+  <a
+  [routerLink]="['/users' , 1, 'user1']"
+  [queryParams]="{page:1,search:'user1'}"
+  [fragment]="'load'"> details of user1</a>
+  <button (click)="getUserDetails()" >Get user1 details</button>
+</div>
+<!------------------------ edit user ---------------------->
+<button (click)="onUserEdit()"> Edit user </button>
+
+

@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="onLoginClick()">Login</button>
+      <button (click)="onLogoutClick()">logout</button>
+    </div>
+  </div>
+  <div class="row">
+    <nav class="navbar bg-dark">
+      <div class="col-md-3">
+
+        <ul class="nav">
+
+          <li class="nav-item">
+            <a class="navbar-brand "
+            routerLink=""
+            routerLinkActive="active">Navbar</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link active"
+            [routerLink]="['']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+            [routerLink]="['users']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">Users</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+            [routerLink]="['category']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >Category</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </nav>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-10">
+         <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

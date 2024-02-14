@@ -1,0 +1,26 @@
+<p>users works!</p>
+<div class="nav bg-body-secondary">
+  <ul class="nav flex column">
+    <li class="navitem">
+      <a
+      class="nav-link"
+      [routerLink]="['/users',1,'user1']"
+      routerLinkActive="active">
+      Get user1 details</a>
+    </li>
+    <li class="navitem">
+      <a
+      [routerLink]="['/users',2,'user2']" r
+      outerLinkActive="active"
+      class="nav-link">
+      Get user2 details</a>
+    </li>
+    <li class="navitem">
+      <a
+      [routerLink]="['/users',3,'user3']"
+      routerLinkActive="active"
+      class="nav-link">Get user3 details</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
